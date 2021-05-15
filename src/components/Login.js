@@ -26,6 +26,7 @@ const Login = () => {
     const [dPassword, setDPassword] = useState("");
     const [alert, setAlert] = useState("");
     const [info, setInfo] = useState("");
+    const [info2, setInfo2] = useState("");
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -57,6 +58,9 @@ const Login = () => {
         } else {
             setAlert("Username or Password incorrect.")
         }
+        
+            
+        
 
     }
 
@@ -89,7 +93,7 @@ const Login = () => {
         var res = await jobAddRequest(requestData, token);
         console.log(res)
         if (res.status === 200) {
-            setInfo("Job created successfully, please login.")
+            setInfo2("Job created successfully.")
         } else {
             setAlert("Error, Job could not be created");
         }
@@ -203,7 +207,7 @@ const Login = () => {
                     <Button block size="lg" type="submit" disabled={!validateNewJob()}>
                         Add Job
                 </Button>
-                    <div>{info}</div>
+                    <div>{info2}</div>
                 </Form>
                 <br></br>
                 <Button block size="lg" onClick={() => setIsLoggedIn(false)}>Logout</Button>
