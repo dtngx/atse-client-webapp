@@ -3,7 +3,8 @@ import "./Home.css"
 
 function Home() {
   return (
-    <div>
+    <div className="Home">
+      <h1>Odd Job Platform</h1>
       <Login/>
     </div>
   );

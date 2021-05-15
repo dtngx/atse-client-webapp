@@ -7,4 +7,7 @@
         margin: 0 auto;
         max-width: 400px;
     }
+    .Logout {
+        padding: 60px 0;
+    }
 }
